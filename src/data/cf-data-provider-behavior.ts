@@ -1,4 +1,4 @@
-import { MinimalCFDimension, MinimalCFGroup } from '../core/index.js';
+import { MinimalCFDimension } from '../core/index.js';
 import { IDataProviderBehavior } from './i-data-provider-behavior.js';
 
 export const cfDataProviderBehavior: IDataProviderBehavior = {
@@ -40,7 +40,7 @@ export const cfDataProviderBehavior: IDataProviderBehavior = {
         }
     },
 
-    getGroupings: (dimension: any, group: MinimalCFGroup, chartId: string) => {
+    getGroupings: (dimension: any, group: any, chartId: string) => {
         return group.all();
     },
 };

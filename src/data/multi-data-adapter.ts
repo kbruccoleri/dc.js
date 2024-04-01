@@ -4,7 +4,7 @@ import { ISimpleDataAdapterConf } from './i-simple-data-adapter-conf.js';
 
 export interface LayerSpec {
     name?: string;
-    group?: MinimalCFGroup;
+    group?: any;
     valueAccessor?: ValueAccessor;
 }
 

@@ -128,7 +128,7 @@ export class FilterStorage implements IFilterStorage {
 
         const filtersToRestore = new Map(
             entries.map(entry => {
-                // Find a listenerChain that has the same chartId registered
+                // Find a listenerChain that has the same dimId registered
                 const listenerChain = listenerChains.find((l: IFilterListenerParams[]) =>
                     l.find(listener => listener.dimId === entry.dimId)
                 );
