@@ -111,11 +111,7 @@ export class FilterStorage implements IFilterStorage {
                 if (listener) {
                     const filters = this._filters.get(listener.storageKey);
                     if (filters && filters.length > 0) {
-                        return this._serializeFilters(
-                          listener.dimId,
-                          listener.dimLabel,
-                          filters
-                        );
+                        return this._serializeFilters(listener.dimId, listener.dimLabel, filters);
                     }
                 }
                 return undefined;

@@ -7,7 +7,6 @@ import { CoordinateGridMixin } from '../base/coordinate-grid-mixin.js';
 import {
     ChartGroupType,
     ChartParentType,
-    Margins,
     MinimalXYScale,
     SVGGElementSelection,
 } from '../core/types.js';

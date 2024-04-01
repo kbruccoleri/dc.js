@@ -23,12 +23,10 @@ export class SimpleDataAdapter extends FilterStorageHelper {
     // TODO: better typing
     public data(): any {
         const { dimension, group, chartId, valueAccessor } = this._conf;
-        return this._getData({dimension, group, chartId, valueAccessor});
+        return this._getData({ dimension, group, chartId, valueAccessor });
     }
 
-    protected _getData(
-        {dimension, group, chartId, valueAccessor}: IGetDataParams
-    ) {
+    protected _getData({ dimension, group, chartId, valueAccessor }: IGetDataParams) {
         // create a two-level deep copy defensively
         return this.providerBehavior
             .getGroupings(dimension, group, chartId)

@@ -11,7 +11,12 @@ import { ColorMixin } from '../base/color-mixin.js';
 import { BaseMixin } from '../base/base-mixin.js';
 import { constants } from '../core/constants.js';
 import { BadArgumentException } from '../core/bad-argument-exception.js';
-import { ChartGroupType, ChartParentType, LegendItem, SVGGElementSelection } from '../core/types.js';
+import {
+    ChartGroupType,
+    ChartParentType,
+    LegendItem,
+    SVGGElementSelection,
+} from '../core/types.js';
 import { ISunburstChartConf, RingSizeSpecs } from './i-sunburst-chart-conf.js';
 import { HierarchyFilter } from '../core/filters/hierarchy-filter.js';
 

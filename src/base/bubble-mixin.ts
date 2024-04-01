@@ -202,11 +202,10 @@ export function BubbleMixin<TBase extends Constructor<MinimalBase>>(Base: TBase)
                     .attr('opacity', 0)
                     .attr('pointer-events', d => this._labelPointerEvent(d))
                     .text(d => this._labelFunction(d));
-                transition(
-                    label,
-                    this._conf.transitionDuration,
-                    this._conf.transitionDelay
-                ).attr('opacity', d => this._labelOpacity(d));
+                transition(label, this._conf.transitionDuration, this._conf.transitionDelay).attr(
+                    'opacity',
+                    d => this._labelOpacity(d)
+                );
             }
         }
 
@@ -219,11 +218,10 @@ export function BubbleMixin<TBase extends Constructor<MinimalBase>>(Base: TBase)
                     .select('text')
                     .attr('pointer-events', d => this._labelPointerEvent(d))
                     .text(d => this._labelFunction(d));
-                transition(
-                    labels,
-                    this._conf.transitionDuration,
-                    this._conf.transitionDelay
-                ).attr('opacity', d => this._labelOpacity(d));
+                transition(labels, this._conf.transitionDuration, this._conf.transitionDelay).attr(
+                    'opacity',
+                    d => this._labelOpacity(d)
+                );
             }
         }
 

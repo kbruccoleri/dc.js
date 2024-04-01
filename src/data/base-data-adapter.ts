@@ -1,6 +1,5 @@
 import { ISimpleDataAdapterConf } from './i-simple-data-adapter-conf.js';
 import { IDataProviderBehavior } from './i-data-provider-behavior.js';
-import { cfDataProviderBehavior } from './cf-data-provider-behavior.js';
 
 export class BaseDataAdapter {
     protected _conf: ISimpleDataAdapterConf;

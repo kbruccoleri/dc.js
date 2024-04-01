@@ -6,7 +6,12 @@ import { interpolate } from 'd3-interpolate';
 import { ColorMixin } from '../base/color-mixin.js';
 import { BaseMixin } from '../base/base-mixin.js';
 import { transition } from '../core/core.js';
-import { ChartGroupType, ChartParentType, LegendItem, SVGGElementSelection } from '../core/types.js';
+import {
+    ChartGroupType,
+    ChartParentType,
+    LegendItem,
+    SVGGElementSelection,
+} from '../core/types.js';
 import { IPieChartConf } from './i-pie-chart-conf.js';
 import { SimpleDataCapHelper } from '../data/index.js';
 

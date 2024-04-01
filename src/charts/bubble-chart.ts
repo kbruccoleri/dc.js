@@ -1,7 +1,12 @@
 import { BubbleMixin } from '../base/bubble-mixin.js';
 import { CoordinateGridMixin } from '../base/coordinate-grid-mixin.js';
 import { transition } from '../core/core.js';
-import { BaseAccessor, ChartGroupType, ChartParentType, SVGGElementSelection } from '../core/types.js';
+import {
+    BaseAccessor,
+    ChartGroupType,
+    ChartParentType,
+    SVGGElementSelection,
+} from '../core/types.js';
 
 /**
  * A concrete implementation of a general purpose bubble chart that allows data visualization using the

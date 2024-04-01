@@ -211,12 +211,10 @@ export class DataTable extends BaseMixin {
             .selectAll<HTMLTableRowElement, any>(`tr.${ROW_CSS_CLASS}`)
             .data(d => d.values);
 
-        const rowEnter: Selection<
-            HTMLTableRowElement,
-            unknown,
-            HTMLTableSectionElement,
-            any
-        > = rows.enter().append('tr').attr('class', ROW_CSS_CLASS);
+        const rowEnter: Selection<HTMLTableRowElement, unknown, HTMLTableSectionElement, any> = rows
+            .enter()
+            .append('tr')
+            .attr('class', ROW_CSS_CLASS);
 
         this._conf.columns.forEach((v, i) => {
             rowEnter
