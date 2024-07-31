@@ -1,3 +1,8 @@
+## 5.0.0-alpha4
+* Minor typings fixes
+* minor refactor for beforeResize
+* Make redrawAll resilient against errors in beforeRedrawAll 
+
 ## 5.0.0-alpha3
 * Rearrange Data Classes to better support Remote Data classes.
 * Extract and externalize CrossFilter specific behavior. This should allow easier to remote data.
