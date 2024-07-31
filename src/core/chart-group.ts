@@ -175,8 +175,15 @@ export class ChartGroup implements IChartGroup {
      * needs to be called to see the updated data.
      */
     public async redrawAll(): Promise<void> {
-        if (typeof this.beforeRedrawAll === 'function') {
-            await this.beforeRedrawAll();
+        try {
+            if (typeof this.beforeRedrawAll === 'function') {
+                await this.beforeRedrawAll();
+            }
+        } catch (e) {
+            console.error(
+                `The beforeRedrawAll callback faced an error: ${e}. Skipping redraw.`
+            );
+            return;
         }
 
         for (const chart of this._charts) {
