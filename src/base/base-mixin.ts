@@ -86,6 +86,8 @@ export class BaseMixin {
             'postRender',
             'preRedraw',
             'postRedraw',
+            'preResize',
+            'postResize',
             'filtered',
             'zoomed',
             'renderlet',
@@ -205,9 +207,6 @@ export class BaseMixin {
         const width = max([rect.width, this.conf().minWidth]);
         const height = max([rect.height, this.conf().minHeight]);
         rect = { width, height };
-        if (this.conf().beforeResize) {
-            this.conf().beforeResize(rect);
-        }
         return rect;
     }
 
@@ -221,6 +220,9 @@ export class BaseMixin {
         this.withoutTransitions(() => {
             this._calculatedWidth = rect.width;
             this._calculatedHeight = rect.height;
+            if (this.conf().beforeResize) {
+                this.conf().beforeResize(rect);
+            }
             this.redraw();
         });
     }
