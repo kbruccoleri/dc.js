@@ -71,7 +71,10 @@
     "prepublishOnly": "npm run build && npm run css && npm run karmaChrome"
   },
   "browser": "dist/dc.js",
-  "exports": "./dist/esm6/index.js",
+  "exports": {
+    ".": "./dist/esm6/index.js",
+    "./dist/style/*.css": "./dist/style/*.css"
+  },
   "main": "./dist/esm6/index.js",
   "type": "module",
   "typings": "index.d.ts"
